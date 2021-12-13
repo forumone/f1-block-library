@@ -1,0 +1,19 @@
+{
+  "name": "f1-block-library",
+  "version": "1.0.0",
+  "description": "Forum One WP block library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forumone/f1-block-library.git"
+  },
+  "author": "Forum One",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forumone/f1-block-library/issues"
+  },
+  "homepage": "https://github.com/forumone/f1-block-library#readme"
+}

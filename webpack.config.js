@@ -10,7 +10,12 @@ module.exports = {
       })
       .reduce((entries, currentFile) => {
         const updatedEntries = entries;
-        const [newFilePath] = path.dirname(currentFile).split(path.sep).slice(-1);
+        let newFilePath;
+        if (path.basename(currentFile, '.js') === 'index') {
+          [newFilePath] = path.dirname(currentFile).split(path.sep).slice(-1);
+        } else {
+          newFilePath = path.basename(currentFile, '.js');
+        }
         // Throw an error if duplicate files detected.
         if (updatedEntries[newFilePath]) {
           throw new Error(`More than one file named ${newFilePath}.js found.`);

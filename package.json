@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Forum One WP block library",
   "scripts": {
-    "build": "wp-scripts build",
-    "start": "wp-scripts start"
+    "format": "wp-scripts format",
+    "lint": "wp-scripts lint-js && wp-scripts lint-style",
+    "build": "npm run lint && wp-scripts build",
+    "dev": "wp-scripts start"
   },
   "repository": {
     "type": "git",
@@ -23,8 +25,12 @@
     "@wordpress/components": "^19.1.5",
     "@wordpress/i18n": "^4.2.4",
     "@wordpress/scripts": "^19.2.2",
+    "@wordpress/stylelint-config": "^19.1.0",
     "classnames": "^2.3.1",
     "domready": "^1.0.8",
     "glob": "^7.2.0"
+  },
+  "devDependencies": {
+    "@wordpress/prettier-config": "^1.1.1"
   }
 }

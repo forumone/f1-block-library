@@ -1,0 +1,10 @@
+extends:
+  - '@wordpress/stylelint-config/scss'
+rules:
+  # Prettier automatically removes the empty line
+  at-rule-empty-line-before: null
+  # Allow BEM style classes
+  selector-class-pattern: null
+  # @wordpress/prettier-config uses single quotes,
+  # so prettier and stylelint are in conflict here
+  string-quotes: single

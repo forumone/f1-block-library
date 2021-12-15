@@ -1,2 +1,1 @@
 .accordion__item{border-bottom:1px solid var(--wp--preset--color--gray-2,#e6e6e6)}.accordion__heading{font-weight:700;margin:0}.accordion__toggle{background-color:transparent;border:0;cursor:pointer;display:flex;font-weight:unset;justify-content:space-between;padding:1rem 4rem 1rem 1rem;position:relative;text-align:left;transition:all .2s ease-out;width:100%}.accordion__drawer{background-color:var(--wp--preset--color--white,#fff);display:none}
-.accordion-drawer{display:block!important}

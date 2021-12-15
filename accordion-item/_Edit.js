@@ -12,7 +12,7 @@ function Edit({ attributes, setAttributes }) {
 			className={classnames(blockProps.className, 'accordion__item')}
 		>
 			<h3 className="accordion__heading">
-				<span className="accordion__toggle">
+				<div className="accordion__toggle">
 					<TextControl
 						label={__('Panel Title')}
 						value={title}
@@ -20,7 +20,7 @@ function Edit({ attributes, setAttributes }) {
 							setAttributes({ title: newTitle })
 						}
 					/>
-				</span>
+				</div>
 			</h3>
 			<div className="accordion__drawer">
 				<div className="accordion__drawer-inner">

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/accordion",
+  "title": "Accordion",
+  "category": "widgets",
+  "editorScript": "file:../build/accordion.js",
+  "style": "file:../build/accordion.css",
+  "editorStyle": "file:../build/accordion-editor.css"
+}

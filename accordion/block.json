@@ -4,6 +4,16 @@
   "name": "f1-block-library/accordion",
   "title": "Accordion",
   "category": "widgets",
+  "attributes": {
+    "allowToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowMultiple": {
+      "type": "boolean",
+      "default": false
+    }
+  },
   "editorScript": "file:../build/accordion.js",
   "style": "file:../build/accordion.css",
   "editorStyle": "file:./accordion-editor.css",

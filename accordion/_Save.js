@@ -7,7 +7,11 @@ function Save() {
 	return (
 		<div
 			{...blockProps}
-			className={classnames(blockProps.className, 'accordion')}
+			className={classnames(
+				blockProps.className,
+				'accordion',
+				'js-accordion'
+			)}
 		>
 			<InnerBlocks.Content />
 		</div>

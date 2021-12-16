@@ -6,5 +6,6 @@
   "category": "widgets",
   "editorScript": "file:../build/accordion.js",
   "style": "file:../build/accordion.css",
-  "editorStyle": "file:./accordion-editor.css"
+  "editorStyle": "file:./accordion-editor.css",
+  "script": "file:../build/accordion-view.js"
 }

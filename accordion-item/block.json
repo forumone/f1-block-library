@@ -7,8 +7,10 @@
   "parent": ["f1-block-item/accordion"],
   "attributes": {
     "title": {
-      "type": "string",
-      "default": ""
+      "type": "string"
+    },
+    "blockId": {
+      "type": "string"
     }
   },
   "editorScript": "file:../build/accordion-item.js"

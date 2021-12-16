@@ -3,13 +3,14 @@ import classnames from 'classnames';
 
 function Save({ attributes }) {
 	const blockProps = useBlockProps.save();
-	const { title } = attributes;
-	const buttonId = `${blockProps.id}-button`;
-	const drawerId = `${blockProps.id}-drawer`;
+	const { title, blockId } = attributes;
+	const buttonId = `${blockId}-button`;
+	const drawerId = `${blockId}-drawer`;
 	return (
 		<div
 			{...blockProps}
 			className={classnames(blockProps.className, 'accordion__item')}
+			id={blockId}
 		>
 			<h3 className="accordion__heading">
 				<button
@@ -18,6 +19,8 @@ function Save({ attributes }) {
 						'js-accordion-toggle'
 					)}
 					id={buttonId}
+					aria-controls={drawerId}
+					aria-expanded="false"
 				>
 					{title}
 				</button>

@@ -23,6 +23,7 @@ function Edit({ attributes, setAttributes, clientId }) {
 					value={title}
 					onChange={(newTitle) => setAttributes({ title: newTitle })}
 				/>
+				<span className="accordion__icon" />
 			</h3>
 			<div className="accordion__drawer">
 				<div className="accordion__drawer-inner">

@@ -23,6 +23,7 @@ function Save({ attributes }) {
 					aria-expanded="false"
 				>
 					{title}
+					<span className="accordion__icon" />
 				</button>
 			</h3>
 			<div

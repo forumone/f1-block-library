@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/back-to-top",
+  "title": "Back to Top",
+  "category": "theme",
+  "attributes": {
+    "topElement": {
+      "type": "string",
+      "default": "top"
+    },
+    "title": {
+      "type": "string",
+      "default": "Back to Top"
+    }
+  },
+  "supports": {
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "html": false
+  },
+  "editorScript": "file:../build/back-to-top.js",
+  "viewScript": "file:../build/back-to-top-view.js",
+  "style": "file:../build/back-to-top.css"
+}

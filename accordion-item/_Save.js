@@ -1,4 +1,4 @@
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
 import classnames from 'classnames';
 
 function Save({ attributes }) {
@@ -22,8 +22,8 @@ function Save({ attributes }) {
 					aria-controls={drawerId}
 					aria-expanded="false"
 				>
-					{title}
-					<span className="accordion__icon" />
+					<RichText.Content tagName="span" value={title} />
+					<span className="accordion__icon" aria-hidden="true" />
 				</button>
 			</h3>
 			<div

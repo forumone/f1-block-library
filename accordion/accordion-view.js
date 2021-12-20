@@ -54,16 +54,14 @@ function initAccordion() {
 			// because the <span> inside <button> screws things up
 			if (
 				event.target.classList.contains(ACCORDION_TOGGLE_CLASS) ||
-				event.target.parentElement.classList.contains(
-					ACCORDION_TOGGLE_CLASS
-				)
+				event.target.closest(`.${ACCORDION_TOGGLE_CLASS}`)
 			) {
 				let target;
 				// Set target based on click or keydown
 				if (event.target.classList.contains(ACCORDION_TOGGLE_CLASS)) {
 					target = event.target;
 				} else {
-					target = event.target.parentElement;
+					target = event.target.closest(`.${ACCORDION_TOGGLE_CLASS}`);
 				}
 
 				// Check if the current toggle is expanded.

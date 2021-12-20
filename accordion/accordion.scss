@@ -9,26 +9,27 @@ $accordion-item-icon-size: 20px;
 }
 
 .accordion__heading {
+	@include reduce-motion('transition');
+	cursor: pointer;
+	display: flex;
 	font-weight: 700;
+	justify-content: space-between;
 	margin: 0;
+	padding: 1rem 4rem 1rem 1rem;
+	position: relative;
+	transition: all 200ms ease-out;
 }
 
 .accordion__toggle {
-	@include reduce-motion('transition');
 	background-color: transparent;
 	border: 0;
-	cursor: pointer;
-	display: flex;
+	cursor: inherit;
 	// Stylelint is trying to prevent things like 'bold' here,
 	// which is fair, but there's no numeric equivalent for
 	// 'undo the browser's default styles'
 	// stylelint-disable-next-line font-weight-notation
 	font-weight: unset;
-	justify-content: space-between;
-	padding: 1rem 4rem 1rem 1rem;
-	position: relative;
 	text-align: left;
-	transition: all 200ms ease-out;
 	width: 100%;
 }
 

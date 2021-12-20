@@ -6,12 +6,18 @@
   "category": "widgets",
   "attributes": {
     "allowToggle": {
-      "type": "boolean",
-      "default": true
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "selector": "div",
+      "attribute": "data-allow-toggle"
     },
     "allowMultiple": {
       "type": "boolean",
-      "default": false
+      "default": "false",
+      "source": "attribute",
+      "selector": "div",
+      "attribute": "data-allow-toggle"
     }
   },
   "editorScript": "file:../build/accordion.js",

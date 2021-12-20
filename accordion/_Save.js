@@ -13,8 +13,8 @@ function Save({ attributes }) {
 				'accordion',
 				'js-accordion'
 			)}
-			data-allow-multiple={allowMultiple ? 'true' : null}
-			data-allow-toggle={allowToggle ? 'true' : null}
+			data-allow-multiple={allowMultiple}
+			data-allow-toggle={allowToggle}
 		>
 			<InnerBlocks.Content />
 		</div>

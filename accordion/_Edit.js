@@ -19,20 +19,22 @@ function Edit({ attributes, setAttributes }) {
 						help={__(
 							'Allow multiple accordion drawers to be open at the same time.'
 						)}
-						checked={allowMultiple}
+						checked={allowMultiple === 'true'}
 						onChange={() =>
 							setAttributes({
-								allowMultiple: !allowMultiple,
+								allowMultiple:
+									allowMultiple === 'true' ? 'false' : 'true',
 							})
 						}
 					/>
 					<ToggleControl
 						label={__('Allow toggle')}
 						help={__('Allow toggling a drawer open and closed.')}
-						checked={allowToggle}
+						checked={allowToggle === 'true'}
 						onChange={() =>
 							setAttributes({
-								allowToggle: !allowToggle,
+								allowToggle:
+									allowToggle === 'true' ? 'false' : 'true',
 							})
 						}
 					/>

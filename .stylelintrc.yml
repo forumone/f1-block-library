@@ -3,6 +3,7 @@ extends:
 rules:
   # Prettier automatically removes the empty line
   at-rule-empty-line-before: null
+  rule-empty-line-before: null
   # Allow BEM style classes
   selector-class-pattern: null
   # @wordpress/prettier-config uses single quotes,

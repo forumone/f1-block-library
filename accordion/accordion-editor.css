@@ -1,0 +1,7 @@
+.accordion__drawer {
+	display: block;
+}
+
+.accordion__toggle {
+	cursor: unset;
+}

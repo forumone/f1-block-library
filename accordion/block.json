@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/accordion",
+  "title": "Accordion",
+  "category": "widgets",
+  "attributes": {
+    "allowToggle": {
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "selector": "div",
+      "attribute": "data-allow-toggle"
+    },
+    "allowMultiple": {
+      "type": "boolean",
+      "default": "false",
+      "source": "attribute",
+      "selector": "div",
+      "attribute": "data-allow-toggle"
+    }
+  },
+  "editorScript": "file:../build/accordion.js",
+  "style": "file:../build/accordion.css",
+  "editorStyle": "file:./accordion-editor.css",
+  "script": "file:../build/accordion-view.js"
+}

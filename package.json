@@ -2,9 +2,9 @@
   "name": "f1-block-library",
   "version": "1.0.0",
   "description": "Forum One WP block library",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/forumone/f1-block-library/issues"
   },
-  "homepage": "https://github.com/forumone/f1-block-library#readme"
+  "homepage": "https://github.com/forumone/f1-block-library#readme",
+  "dependencies": {
+    "@wordpress/block-editor": "^8.0.11",
+    "@wordpress/i18n": "^4.2.4",
+    "@wordpress/scripts": "^19.2.2",
+    "classnames": "^2.3.1",
+    "glob": "^7.2.0"
+  }
 }

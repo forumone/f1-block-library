@@ -1,1 +1,88 @@
-.back-to-top{display:none}@media(min-width:600px){.back-to-top{align-items:center;border-radius:50%;bottom:1.25rem;display:flex;height:4.375rem;justify-content:center;position:fixed;right:1.25rem;transition-duration:.2s;transition-property:filter,opacity;transition-timing-function:ease-in;width:4.375rem}}@media(min-width:600px)and (prefers-reduced-motion:reduce){.back-to-top{transition-delay:0s;transition-duration:0s}}@media(min-width:600px){.back-to-top:visited{color:currentColor}.back-to-top:focus,.back-to-top:hover{filter:brightness(.6)}.back-to-top[aria-hidden=true]{opacity:0}}.back-to-top__icon{fill:currentColor;height:1.375rem;width:2.1875rem}
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./back-to-top/back-to-top.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+.back-to-top {
+  display: none;
+}
+@media (min-width: 600px) {
+  .back-to-top {
+    align-items: center;
+    border-radius: 50%;
+    bottom: 1.25rem;
+    display: flex;
+    height: 4.375rem;
+    justify-content: center;
+    position: fixed;
+    right: 1.25rem;
+    transition-duration: 200ms;
+    transition-property: filter, opacity;
+    transition-timing-function: ease-in;
+    width: 4.375rem;
+  }
+}
+@media (min-width: 600px) and (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition-duration: 0s;
+    transition-delay: 0s;
+  }
+}
+@media (min-width: 600px) {
+  .back-to-top:visited {
+    color: currentColor;
+  }
+}
+@media (min-width: 600px) {
+  .back-to-top:hover, .back-to-top:focus {
+    filter: brightness(0.6);
+  }
+}
+@media (min-width: 600px) {
+  .back-to-top[aria-hidden=true] {
+    opacity: 0;
+  }
+}
+
+.back-to-top__icon {
+  fill: currentColor;
+  height: 1.375rem;
+  width: 2.1875rem;
+}
+
+/*# sourceMappingURL=back-to-top.css.map*/

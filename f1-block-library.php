@@ -21,3 +21,17 @@ function f1_block_library_register_blocks() {
 	) );
 }
 add_action( 'init', 'f1_block_library_register_blocks' );
+
+if ( function_exists( 'acf_register_block_type' ) ) {
+	function f1_block_library_register_acf_blocks() {
+		acf_register_block_type(array(
+			'name'				=> 'featured-cards',
+			'title'				=> __( 'Cards' ),
+			'render_template' 	=> plugin_dir_path(__FILE__) . 'card/featured-cards/featured-cards-render.php',
+			'category'			=> 'widgets',
+			'supports'			=> array( 'align' => array( 'wide', 'full' ) ),
+			'enqueue_style'		=> plugin_dir_path(__FILE__) . 'build/card.css',
+		) );
+	}
+	add_action( 'acf/init', 'f1_block_library_register_acf_blocks' );
+}

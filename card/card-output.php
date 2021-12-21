@@ -31,7 +31,7 @@ return sprintf('
 	</div>',
 get_the_permalink($post),
 get_the_title($post),
-get_the_date($post),
+get_the_date('', $post),
 get_the_excerpt($post),
 __( 'Read more' ),
 __( 'about' )

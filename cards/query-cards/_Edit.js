@@ -25,7 +25,7 @@ function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 			<div {...blockProps}>
 				<ServerSideRender
-					block="f1-block-library/query-card"
+					block="f1-block-library/query-cards"
 					attributes={attributes}
 				/>
 			</div>

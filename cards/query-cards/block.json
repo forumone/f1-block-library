@@ -1,15 +1,15 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "f1-block-library/query-card",
-  "title": "Card",
+  "name": "f1-block-library/query-cards",
+  "title": "Cards (Query Loop)",
   "parent": [ "core/query" ],
   "category": "widgets",
   "supports": {
     "align": [ "wide", "full"]
   },
-  "style": "file:../../build/query-card.css",
-  "editorScript": "file:../../build/query-card.js",
+  "style": "file:../../build/query-cards.css",
+  "editorScript": "file:../../build/query-cards.js",
   "usesContext": [ "postId", "postType", "queryId", "query", "queryContext" ],
   "attributes": {
     "columns": {

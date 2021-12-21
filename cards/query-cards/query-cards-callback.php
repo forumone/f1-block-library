@@ -5,7 +5,7 @@
  * @param $block
  * @param $context
  */
-function f1_block_library_query_card_callback( $block_attributes, $block, $context ) {
+function f1_block_library_query_cards_callback( $block_attributes, $block, $context ) {
 	// Get the query args.
 	$page_key = isset( $block->context['queryId'] ) ? 'query-' . $block->context['queryId'] . '-page' : 'query-page';
 	$page = empty( $_GET[ $page_key ] ) ? 1 : (int) $_GET[ $page_key ];

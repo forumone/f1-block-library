@@ -1,5 +1,5 @@
 import { slideDown, slideUp } from '../common/_slide';
-import domready from 'domready';
+import domReady from '@wordpress/dom-ready';
 
 function initAccordion() {
 	const ACCORDION_CLASS = 'js-accordion';
@@ -174,4 +174,4 @@ function initAccordion() {
 	});
 }
 
-domready(initAccordion);
+domReady(initAccordion);

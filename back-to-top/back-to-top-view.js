@@ -6,7 +6,7 @@
  * @param {boolean} smoothScroll Whether to animate the user's scroll back
  *                               to the top.
  */
-import domready from 'domready';
+import domReady from '@wordpress/dom-ready';
 
 function initBackToTop(threshold = 200, smoothScroll = true) {
 	const backToTop = document.querySelector('.back-to-top');
@@ -56,4 +56,4 @@ function initBackToTop(threshold = 200, smoothScroll = true) {
 	}
 }
 
-domready(initBackToTop);
+domReady(initBackToTop);

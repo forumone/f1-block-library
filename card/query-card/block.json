@@ -5,6 +5,9 @@
   "title": "Card",
   "parent": [ "core/query" ],
   "category": "widgets",
+  "supports": {
+    "align": [ "wide", "full"]
+  },
   "style": "file:../../build/query-card.css",
   "editorScript": "file:../../build/query-card.js",
   "usesContext": [ "postId", "postType", "queryId", "query", "queryContext" ]

@@ -30,7 +30,7 @@ if ( function_exists( 'acf_register_block_type' ) ) {
 			'render_template' 	=> plugin_dir_path(__FILE__) . 'card/featured-cards/featured-cards-render.php',
 			'category'			=> 'widgets',
 			'supports'			=> array( 'align' => array( 'wide', 'full' ) ),
-			'enqueue_style'		=> plugin_dir_path(__FILE__) . 'build/card.css',
+			'enqueue_style'		=> plugin_dir_url( __FILE__ ) . 'build/query-card.css',
 		) );
 	}
 	add_action( 'acf/init', 'f1_block_library_register_acf_blocks' );

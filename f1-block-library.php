@@ -9,9 +9,15 @@
  * @package           f1-block-library
  */
 
+require_once plugin_dir_path(__FILE__) . 'card/query-card/query-card-callback.php';
+
 function f1_block_library_register_blocks() {
   	register_block_type_from_metadata(__DIR__ . '/back-to-top');
 	register_block_type_from_metadata(__DIR__ . '/accordion-item');
 	register_block_type_from_metadata(__DIR__ . '/accordion');
+	register_block_type_from_metadata(__DIR__ . '/card/query-card', array(
+		'render_callback' => 'f1_block_library_query_card_callback',
+		'skip_inner_blocks' => true,
+	) );
 }
 add_action( 'init', 'f1_block_library_register_blocks' );

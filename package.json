@@ -26,6 +26,7 @@
     "@wordpress/dom-ready": "^3.2.3",
     "@wordpress/i18n": "^4.2.4",
     "@wordpress/scripts": "^19.2.2",
+    "@wordpress/server-side-render": "^3.0.16",
     "@wordpress/stylelint-config": "^19.1.0",
     "classnames": "^2.3.1",
     "glob": "^7.2.0"

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/query-card",
+  "title": "Card",
+  "parent": [ "core/query" ],
+  "category": "widgets",
+  "style": "file:../../build/query-card.css",
+  "editorScript": "file:../../build/query-card.js",
+  "usesContext": [ "postId", "postType", "queryId", "query", "queryContext" ]
+}

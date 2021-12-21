@@ -1,15 +1,3 @@
-.readmore-link {
-	padding-right: 28px;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		path {
-			fill: var(--wp--preset--color--blue-dark-1, #0071bc);
-		}
-	}
-}
-
 .readmore-link__icon {
 	display: inline-block;
 	margin-right: -28px;
@@ -19,6 +7,18 @@
 
 	path {
 		fill: var(--wp--preset--color--blue-base, #0071bc);
+	}
+}
+
+.readmore-link {
+	padding-right: 28px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		path {
+			fill: var(--wp--preset--color--blue-dark-1, #0071bc);
+		}
 	}
 }
 

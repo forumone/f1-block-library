@@ -30,7 +30,7 @@
             {
                 "key": "field_61c200d2761f8",
                 "label": "Number of Columns",
-                "name": "number_of_columns",
+                "name": "columns",
                 "type": "number",
                 "instructions": "",
                 "required": 0,
@@ -40,12 +40,12 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": 3,
+                "default_value": 2,
                 "placeholder": "",
                 "prepend": "",
                 "append": "",
                 "min": 1,
-                "max": 3,
+                "max": 4,
                 "step": 1
             },
             {

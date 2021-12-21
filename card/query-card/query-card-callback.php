@@ -34,7 +34,10 @@ function f1_block_library_query_card_callback( $block_attributes, $block, $conte
 	}
 
 	// Get any custom class names added to the block.
-	$classnames = '';
+	$classnames = 'cards';
+	if ( !empty( $block_attributes['columns'] ) ) {
+		$classnames .= ' cards--columns-' . intval( $block_attributes['columns'] );
+	}
 	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $classnames ) );
 
 	// Render the cards

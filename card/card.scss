@@ -7,6 +7,31 @@ $card-link-color-hover: var(--wp--preset--color--black, '#000') !default;
 $card-meta-color: var(--wp--preset--color--black, '#000') !default;
 $card-padding: 1.5rem !default;
 
+.cards {
+	display: grid;
+	gap: var(--wp--style--block-gap, 1.5rem);
+
+	@include break-small {
+		&.cards--columns-2,
+		&.cards--columns-3,
+		&.cards--columns-4 {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include break-large {
+		&.cards--columns-3 {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	@include break-xlarge {
+		&.cards--columns-4 {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+}
+
 .card {
 	border-bottom: 4px solid $card-accent-border-color;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -18,6 +43,20 @@ $card-padding: 1.5rem !default;
 	&:focus-within {
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
 			0 6px 6px rgba(0, 0, 0, 0.23);
+	}
+}
+
+.card__media {
+	order: -1;
+
+	a {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
+	img {
+		width: 100%;
 	}
 }
 
@@ -62,20 +101,6 @@ $card-padding: 1.5rem !default;
 
 .card__content {
 	margin-bottom: 1.5rem;
-}
-
-.card__media {
-	order: -1;
-
-	a {
-		display: block;
-		height: 100%;
-		width: 100%;
-	}
-
-	img {
-		width: 100%;
-	}
 }
 
 .card__footer {

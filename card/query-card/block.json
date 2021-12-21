@@ -10,5 +10,11 @@
   },
   "style": "file:../../build/query-card.css",
   "editorScript": "file:../../build/query-card.js",
-  "usesContext": [ "postId", "postType", "queryId", "query", "queryContext" ]
+  "usesContext": [ "postId", "postType", "queryId", "query", "queryContext" ],
+  "attributes": {
+    "columns": {
+      "type": "integer",
+      "default": 2
+    }
+  }
 }

@@ -1,7 +1,10 @@
 <?php $featured_cards = get_field('cards');
-$classnames = 'featured-cards';
+$classnames = 'cards';
 if (get_field('style') == 'featured') {
 	$classnames .= ' is-style-featured';
+}
+if (get_field('columns')) {
+	$classnames .= ' cards--columns-' . intval( get_field( 'columns' ) );
 }
 if (!empty($block['className'])) {
 	$classnames .= ' ' . $block['className'];

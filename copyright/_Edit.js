@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
-	const { copyright_text } = attributes;
+	const { copyrightText } = attributes;
 	return (
 		<div
 			{...blockProps}
@@ -11,10 +11,10 @@ function Edit({ attributes, setAttributes }) {
 		>
 			&copy;{new Date().getFullYear()}{' '}
 			<RichText
-				identifier="copyright_text"
-				value={copyright_text}
+				identifier="copyrightText"
+				value={copyrightText}
 				onChange={(newValue) =>
-					setAttributes({ copyright_text: newValue })
+					setAttributes({ copyrightText: newValue })
 				}
 				tagName="span"
 				placeholder="Your Site Name"

@@ -9,7 +9,7 @@
   },
   "editorScript": "file:../build/copyright.js",
   "attributes": {
-    "copyright_text": {
+    "copyrightText": {
       "type": "string"
     }
   }

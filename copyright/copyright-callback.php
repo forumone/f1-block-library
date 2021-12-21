@@ -7,6 +7,6 @@ function f1_block_library_copyright_callback( $block_attributes, $block, $contex
 		'<div %1$s>&copy;%2$s %3$s</div>',
 		$wrapper_attributes,
 		date('Y'),
-		$block_attributes['copyright_text']
+		$block_attributes['copyrightText']
 	);
 }

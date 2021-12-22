@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/mega-menu",
+  "title": "Mega Menu",
+  "category": "theme",
+  "supports": {
+    "html": true,
+    "align": ["wide", "full"]
+  },
+  "editorScript": "file:../build/mega-menu.js",
+  "style": "file:../build/mega-menu.css"
+}

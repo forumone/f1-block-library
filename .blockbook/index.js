@@ -8,6 +8,8 @@ import '../build/accordion-item';
 import '../build/back-to-top';
 import '../build/back-to-top.css';
 import '../build/copyright';
+import '../build/skiplinks';
+import '../build/skiplinks.css';
 
 // Themes
 registerTheme({
@@ -51,5 +53,6 @@ const blocks = [
 	'f1-block-library/accordion',
 	'f1-block-library/back-to-top',
 	'f1-block-library/copyright',
+	'f1-block-library/skiplinks',
 ];
 blocks.forEach((block) => registerBlockType(block));

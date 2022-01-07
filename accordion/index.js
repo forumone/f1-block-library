@@ -9,4 +9,23 @@ registerBlockType('f1-block-library/accordion', {
 	...metadata,
 	edit: Edit,
 	save: Save,
+	example: {
+		innerBlocks: [
+			{
+				name: 'f1-block-library/accordion-item',
+				attributes: {
+					title: 'Accordion Item Title',
+					blockId: 'accordion-item-1',
+				},
+				innerBlocks: [
+					{
+						name: 'core/paragraph',
+						attributes: {
+							content: 'Lorem ipsum',
+						},
+					},
+				],
+			},
+		],
+	},
 });

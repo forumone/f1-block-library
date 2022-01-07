@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/skiplinks",
+  "title": "Skiplinks",
+  "category": "theme",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:../build/skiplinks.js",
+  "style": "file:../build/skiplinks.css"
+}

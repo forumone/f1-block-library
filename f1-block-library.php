@@ -18,5 +18,6 @@ function f1_block_library_register_blocks() {
 	register_block_type_from_metadata(__DIR__ . '/copyright', array(
 		'render_callback' => 'f1_block_library_copyright_callback',
 	) );
+	register_block_type_from_metadata(__DIR__ . '/skiplinks');
 }
 add_action( 'init', 'f1_block_library_register_blocks' );

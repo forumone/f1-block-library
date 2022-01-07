@@ -1,1 +1,111 @@
-.accordion__item{border-bottom:1px solid var(--wp--preset--color--gray-2,#e6e6e6)}.accordion__heading{cursor:pointer;display:flex;font-weight:700;justify-content:space-between;margin:0;padding:1rem 4rem 1rem 1rem;position:relative;transition:all .2s ease-out}@media(prefers-reduced-motion:reduce){.accordion__heading{transition-delay:0s;transition-duration:0s}}.accordion__toggle{background-color:transparent;border:0;cursor:inherit;font-weight:unset;text-align:left;width:100%}.accordion__drawer{background-color:var(--wp--preset--color--white,#fff);display:none}.accordion__drawer-inner{padding:0 4rem 1rem 1rem}.accordion__icon{height:20px;position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);width:20px}.accordion__icon:after,.accordion__icon:before{background-color:var(--wp--preset--color--blue-base,#0071bc);content:"";display:block;height:2px;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:center;transition:transform .15s ease-out;width:100%}@media(prefers-reduced-motion:reduce){.accordion__icon:after,.accordion__icon:before{transition-delay:0s;transition-duration:0s}}.accordion__icon:after{transform:translate(-50%,-50%) rotate(90deg)}[aria-expanded=true] .accordion__icon:after{transform:translate(-50%,-50%) rotate(0deg)}
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./accordion/accordion.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+.accordion__item {
+  border-bottom: 1px solid var(--wp--preset--color--gray-2, #e6e6e6);
+}
+
+.accordion__heading {
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem 4rem 1rem 1rem;
+  position: relative;
+  transition: all 200ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion__heading {
+    transition-duration: 0s;
+    transition-delay: 0s;
+  }
+}
+
+.accordion__toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: inherit;
+  font-weight: unset;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion__drawer {
+  background-color: var(--wp--preset--color--white, #fff);
+  display: none;
+}
+
+.accordion__drawer-inner {
+  padding: 0 4rem 1rem 1rem;
+}
+
+.accordion__icon {
+  height: 20px;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+.accordion__icon::before, .accordion__icon::after {
+  background-color: var(--wp--preset--color--blue-base, #0071bc);
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  transition: transform 150ms ease-out;
+  width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion__icon::before, .accordion__icon::after {
+    transition-duration: 0s;
+    transition-delay: 0s;
+  }
+}
+.accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+[aria-expanded=true] .accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/*# sourceMappingURL=accordion.css.map*/

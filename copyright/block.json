@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/copyright",
+  "title": "Copyright",
+  "category": "widgets",
+  "supports": {
+    "align": [ "wide", "full"]
+  },
+  "editorScript": "file:../build/copyright.js",
+  "attributes": {
+    "copyrightText": {
+      "type": "string"
+    }
+  }
+}

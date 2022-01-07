@@ -7,6 +7,7 @@ import '../build/accordion';
 import '../build/accordion-item';
 import '../build/back-to-top';
 import '../build/back-to-top.css';
+import '../build/copyright';
 
 // Themes
 registerTheme({
@@ -49,5 +50,6 @@ const blocks = [
 	'core/video',
 	'f1-block-library/accordion',
 	'f1-block-library/back-to-top',
+	'f1-block-library/copyright',
 ];
 blocks.forEach((block) => registerBlockType(block));

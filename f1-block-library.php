@@ -10,8 +10,8 @@
  */
 
 require_once plugin_dir_path(__FILE__) . 'copyright/copyright-callback.php';
-
 require_once plugin_dir_path(__FILE__) . 'cards/query-cards/query-cards-callback.php';
+require_once plugin_dir_path(__FILE__) . 'cards/single-card/single-card-callback.php';
 
 function f1_block_library_register_blocks() {
   	register_block_type_from_metadata(__DIR__ . '/back-to-top');
@@ -25,6 +25,9 @@ function f1_block_library_register_blocks() {
 		'render_callback' => 'f1_block_library_query_cards_callback',
 		'skip_inner_blocks' => true,
 	) );
+	register_block_type_from_metadata(__DIR__ . '/cards/single-card', array(
+		'render_callback' => 'f1_block_library_single_card_callback',
+	));
 }
 add_action( 'init', 'f1_block_library_register_blocks' );
 

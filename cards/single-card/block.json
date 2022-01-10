@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/single-card",
+  "title": "Single Card",
+  "category": "widgets",
+  "supports": {
+    "align": [ "wide", "full"]
+  },
+  "editorScript": "file:../../build/single-card.js",
+  "style": "file:../../build/query-cards.css",
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string"
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "cardTitle": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    }
+  }
+}

@@ -17,8 +17,16 @@ if ($featured_cards): ?>
 <div <?php echo $wrapper_attributes; ?>>
 	<?php foreach( $featured_cards as $post):
 		setup_postdata($post);
-		$card = include plugin_dir_path( __FILE__ ) . '../card-output.php';
-		echo $card;
+		$markup = include plugin_dir_path( __FILE__ ) . '../card-output.php';
+		printf(
+			$markup,
+			get_the_permalink($post),
+			get_the_title($post),
+			get_the_date('', $post),
+			get_the_excerpt($post),
+			__( 'Read more' ),
+			__( 'about' )
+		);
 	endforeach; wp_reset_postdata(); ?>
 </div>
 <?php endif; ?>

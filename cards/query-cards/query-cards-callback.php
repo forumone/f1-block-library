@@ -4,6 +4,7 @@
  * @param $block_attributes
  * @param $block
  * @param $context
+ * @return string
  */
 function f1_block_library_query_cards_callback( $block_attributes, $block, $context ) {
 	// Get the query args.
@@ -42,10 +43,18 @@ function f1_block_library_query_cards_callback( $block_attributes, $block, $cont
 
 	// Render the cards
 	$content = '';
+	$markup = include plugin_dir_path(__FILE__) . '../card-output.php';
 	while ( $query->have_posts() ) {
 		$post = $query->the_post();
-		$block = include plugin_dir_path(__FILE__) . '../card-output.php';
-		$content .= $block;
+		$content .= sprintf(
+			$markup,
+			get_the_permalink($post),
+			get_the_title($post),
+			get_the_date('', $post),
+			get_the_excerpt($post),
+			__( 'Read more' ),
+			__( 'about' )
+		);;
 	}
 	wp_reset_postdata();
 

@@ -10,6 +10,8 @@ import '../build/back-to-top.css';
 import '../build/copyright';
 import '../build/skiplinks';
 import '../build/skiplinks.css';
+import '../build/query-cards.css';
+import '../build/single-card';
 
 // Themes
 registerTheme({
@@ -54,5 +56,6 @@ const blocks = [
 	'f1-block-library/back-to-top',
 	'f1-block-library/copyright',
 	'f1-block-library/skiplinks',
+	'f1-block-library/single-card',
 ];
 blocks.forEach((block) => registerBlockType(block));

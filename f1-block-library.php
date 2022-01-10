@@ -28,6 +28,7 @@ function f1_block_library_register_blocks() {
 	register_block_type_from_metadata(__DIR__ . '/cards/single-card', array(
 		'render_callback' => 'f1_block_library_single_card_callback',
 	));
+	register_block_type_from_metadata(__DIR__ . '/cards/manual-cards');
 }
 add_action( 'init', 'f1_block_library_register_blocks' );
 

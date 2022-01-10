@@ -4,9 +4,7 @@
   "name": "f1-block-library/single-card",
   "title": "Single Card",
   "category": "widgets",
-  "supports": {
-    "align": [ "wide", "full"]
-  },
+  "parent": ["f1-block-library/manual-cards"],
   "editorScript": "file:../../build/single-card.js",
   "style": "file:../../build/query-cards.css",
   "attributes": {

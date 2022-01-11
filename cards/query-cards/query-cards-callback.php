@@ -48,6 +48,7 @@ function f1_block_library_query_cards_callback( $block_attributes, $block, $cont
 	while ( $query->have_posts() ) {
 		$post = $query->the_post();
 		$content .= cardMarkup(
+			get_the_post_thumbnail($post),
 			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),

@@ -7,7 +7,7 @@
  * Relationship field to manually select content to include.
  */
 
-function cardMarkup($eyebrow, $url, $title, $summary, $openInNewTab = false) {
+function cardMarkup($image, $eyebrow, $url, $title, $summary, $openInNewTab = false) {
 	$markup = '
 <div class="card">
 	<div class="card__body">
@@ -46,9 +46,17 @@ function cardMarkup($eyebrow, $url, $title, $summary, $openInNewTab = false) {
 			$openInNewTab ? '_blank' : '_self'
 		);
 	}
-	$markup .= '
-	</div>
-</div>';
+	$markup .= '</div>';
+	if ($image) {
+		$markup .= '<div class="card__media">';
+			if ($url) {
+				$markup .= sprintf('<a href="%1$s" target="%3$s">%2$s</a>', $url, $image, $openInNewTab ? '_blank' : '_self');
+			} else {
+				$markup .= $image;
+			}
+		$markup .= '</div>';
+	}
+$markup .= '</div>';
 
 	return $markup;
 }

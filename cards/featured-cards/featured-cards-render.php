@@ -22,6 +22,7 @@ if ($featured_cards): ?>
 	<?php foreach( $featured_cards as $post):
 		setup_postdata($post);
 		echo cardMarkup(
+			get_the_post_thumbnail($post),
 			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),

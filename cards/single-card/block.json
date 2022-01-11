@@ -7,6 +7,7 @@
   "parent": ["f1-block-library/manual-cards"],
   "editorScript": "file:../../build/single-card.js",
   "style": "file:../../build/query-cards.css",
+  "editorStyle": "file:./single-card-editor.css",
   "attributes": {
     "url": {
       "type": "string"
@@ -32,6 +33,19 @@
     },
     "eyebrow": {
       "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageAlt": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "alt",
+      "default": ""
     }
   }
 }

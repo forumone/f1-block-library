@@ -7,7 +7,7 @@
  * Relationship field to manually select content to include.
  */
 
-function cardMarkup($eyebrow, $url, $title, $summary) {
+function cardMarkup($eyebrow, $url, $title, $summary, $openInNewTab = false) {
 	$markup = '
 <div class="card">
 	<div class="card__body">
@@ -17,7 +17,7 @@ function cardMarkup($eyebrow, $url, $title, $summary) {
 		$markup .= sprintf('<div class="card__date">%s</div>', $eyebrow);
 	}
 	if ($url && $title) {
-		$markup .= sprintf('<h3 class="card__title"><a href="%1$s">%2$s</a></h3>', $url, $title);
+		$markup .= sprintf('<h3 class="card__title"><a href="%1$s" target="%3$s">%2$s</a></h3>', $url, $title, $openInNewTab ? '_blank' : '_self');
 	}
 	$markup .= '</div>';
 	if ($summary) {
@@ -27,7 +27,7 @@ function cardMarkup($eyebrow, $url, $title, $summary) {
 		$markup .= sprintf('
 		<div class="card__footer">
 			<div class="card__readmore">
-				<a href="%1$s" class="readmore-link">
+				<a href="%1$s" target="%5$s" class="readmore-link">
 					%3$s
 					<span class="readmore-link__icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
@@ -42,7 +42,8 @@ function cardMarkup($eyebrow, $url, $title, $summary) {
 			$url,
 			$title,
 			__( 'Read more' ),
-			__(' about' )
+			__(' about' ),
+			$openInNewTab ? '_blank' : '_self'
 		);
 	}
 	$markup .= '

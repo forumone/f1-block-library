@@ -19,5 +19,6 @@ function f1_block_library_register_blocks() {
 		'render_callback' => 'f1_block_library_copyright_callback',
 	) );
 	register_block_type_from_metadata(__DIR__ . '/skiplinks');
+	register_block_type_from_metadata(__DIR__ . '/mega-menu');
 }
 add_action( 'init', 'f1_block_library_register_blocks' );

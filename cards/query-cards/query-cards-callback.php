@@ -1,5 +1,7 @@
 <?php
 
+require_once plugin_dir_path(__FILE__) . '../card-output.php';
+
 /**
  * @param $block_attributes
  * @param $block
@@ -43,18 +45,14 @@ function f1_block_library_query_cards_callback( $block_attributes, $block, $cont
 
 	// Render the cards
 	$content = '';
-	$markup = include plugin_dir_path(__FILE__) . '../card-output.php';
 	while ( $query->have_posts() ) {
 		$post = $query->the_post();
-		$content .= sprintf(
-			$markup,
+		$content .= cardMarkup(
+			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),
-			get_the_date('', $post),
-			get_the_excerpt($post),
-			__( 'Read more' ),
-			__( 'about' )
-		);;
+			get_the_excerpt($post)
+		);
 	}
 	wp_reset_postdata();
 

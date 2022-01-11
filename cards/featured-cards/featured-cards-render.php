@@ -1,4 +1,8 @@
-<?php $featured_cards = get_field('cards');
+<?php
+
+require_once plugin_dir_path(__FILE__) . '../card-output.php';
+
+$featured_cards = get_field('cards');
 $classnames = 'cards';
 if (get_field('style') == 'featured') {
 	$classnames .= ' is-style-featured';
@@ -17,15 +21,11 @@ if ($featured_cards): ?>
 <div <?php echo $wrapper_attributes; ?>>
 	<?php foreach( $featured_cards as $post):
 		setup_postdata($post);
-		$markup = include plugin_dir_path( __FILE__ ) . '../card-output.php';
-		printf(
-			$markup,
+		echo cardMarkup(
+			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),
-			get_the_date('', $post),
-			get_the_excerpt($post),
-			__( 'Read more' ),
-			__( 'about' )
+			get_the_excerpt($post)
 		);
 	endforeach; wp_reset_postdata(); ?>
 </div>

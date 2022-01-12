@@ -1,0 +1,32 @@
+.readmore-link__icon {
+	display: inline-block;
+	margin-right: -28px;
+	position: relative;
+	top: 8px;
+	width: 28px;
+
+	path {
+		fill: var(--wp--preset--color--blue-base, #0071bc);
+	}
+}
+
+.readmore-link {
+	padding-right: 28px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		path {
+			fill: var(--wp--preset--color--blue-dark-1, #0071bc);
+		}
+	}
+}
+
+.readmore-link__accessibility-description {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+}

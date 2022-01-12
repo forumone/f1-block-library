@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/manual-cards",
+  "title": "Cards (Manual)",
+  "category": "widgets",
+  "supports": {
+    "align": [ "wide", "full"]
+  },
+  "style": "file:../../build/query-cards.css",
+  "editorScript": "file:../../build/manual-cards.js",
+  "attributes": {
+    "columns": {
+      "type": "integer",
+      "default": 2
+    }
+  }
+}

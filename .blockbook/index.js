@@ -12,6 +12,8 @@ import '../build/skiplinks';
 import '../build/skiplinks.css';
 import '../build/mega-menu';
 import '../build/mega-menu.css';
+import '../build/query-cards.css';
+import '../build/single-card';
 
 // Themes
 registerTheme({
@@ -57,5 +59,6 @@ const blocks = [
 	'f1-block-library/copyright',
 	'f1-block-library/skiplinks',
 	'f1-block-library/mega-menu',
+	'f1-block-library/single-card',
 ];
 blocks.forEach((block) => registerBlockType(block));

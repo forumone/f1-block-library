@@ -1,0 +1,19 @@
+.card.wp-block-f1-block-library-single-card {
+	max-width: none;
+	width: 100%;
+}
+
+.card__media {
+	min-height: 200px;
+	position: relative;
+}
+
+.card__media img + .block-editor-media-placeholder {
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

@@ -9,5 +9,6 @@
     "align": ["wide", "full"]
   },
   "editorScript": "file:../build/mega-menu.js",
-  "style": "file:../build/mega-menu.css"
+  "style": "file:../build/mega-menu.css",
+  "script": "file:../build/mega-menu-view.js"
 }

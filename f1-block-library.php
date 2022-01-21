@@ -30,6 +30,7 @@ function f1_block_library_register_blocks() {
 		'render_callback' => 'f1_block_library_single_card_callback',
 	));
 	register_block_type_from_metadata(__DIR__ . '/cards/manual-cards');
+	register_block_type_from_metadata(__DIR__ . '/standalone-link');
 }
 add_action( 'init', 'f1_block_library_register_blocks' );
 

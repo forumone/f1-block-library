@@ -12,9 +12,6 @@
     "url": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
-    },
     "id": {
       "type": "number"
     },

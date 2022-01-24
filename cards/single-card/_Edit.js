@@ -20,7 +20,6 @@ function Edit({ attributes, setAttributes }) {
 	const {
 		eyebrow,
 		url,
-		title,
 		opensInNewTab,
 		cardTitle,
 		summary,
@@ -33,7 +32,6 @@ function Edit({ attributes, setAttributes }) {
 
 	const link = {
 		url,
-		title,
 		opensInNewTab,
 	};
 

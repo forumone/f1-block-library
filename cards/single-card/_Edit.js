@@ -78,6 +78,12 @@ function Edit({ attributes, setAttributes }) {
 					<div className="card__header">
 						<RichText
 							placeholder={__('Date or Topic')}
+							allowedFormats={[
+								'core/bold',
+								'core/italic',
+								'core/subscript',
+								'core/superscript',
+							]}
 							tagName="div"
 							className="card__date"
 							value={eyebrow}
@@ -87,6 +93,12 @@ function Edit({ attributes, setAttributes }) {
 						/>
 						<RichText
 							placeholder={__('Title')}
+							allowedFormats={[
+								'core/bold',
+								'core/italic',
+								'core/subscript',
+								'core/superscript',
+							]}
 							tagName="h3"
 							className="card__title"
 							value={cardTitle}

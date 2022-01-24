@@ -21,6 +21,13 @@
     "type": {
       "type": "string"
     },
+    "linkText": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "linkLabel": {
+      "type": "string"
+    },
     "opensInNewTab": {
       "type": "boolean",
       "default": false

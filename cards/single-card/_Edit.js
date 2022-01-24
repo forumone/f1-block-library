@@ -6,11 +6,12 @@ import {
 	MediaPlaceholder,
 	BlockControls,
 	MediaReplaceFlow,
+	InspectorControls,
 } from '@wordpress/block-editor';
 import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL } from '@wordpress/blob';
-import { Spinner } from '@wordpress/components';
+import { Spinner, TextControl, PanelBody } from '@wordpress/components';
 
 const isTemporaryMedia = (id, url) => !id && isBlobURL(url);
 
@@ -26,6 +27,8 @@ function Edit({ attributes, setAttributes }) {
 		imageId,
 		imageUrl,
 		imageAlt,
+		linkText,
+		linkLabel,
 	} = attributes;
 
 	const link = {
@@ -54,6 +57,17 @@ function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
+			<InspectorControls>
+				<PanelBody title={__('Link Settings')}>
+					<TextControl
+						label={__('Accessible label')}
+						value={linkLabel}
+						onChange={(newValue) =>
+							setAttributes({ linkLabel: newValue })
+						}
+					/>
+				</PanelBody>
+			</InspectorControls>
 			<BlockControls>
 				<MediaReplaceFlow
 					mediaId={imageId}
@@ -117,25 +131,14 @@ function Edit({ attributes, setAttributes }) {
 						/>
 						<div className="card__footer">
 							<div className="card__readmore">
-								<a href={url} className="readmore-link">
-									{__('Read more')}
-									<span className="readmore-link__icon">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="28"
-											height="28"
-											viewBox="0 0 28 28"
-										>
-											<path
-												fill="#231f20"
-												d="M14 4.648l9.352 9.352-9.352 9.352-1.641-1.641 6.508-6.563h-14.219v-2.297h14.219l-6.508-6.563z"
-											/>
-										</svg>
-										<span className="readmore-link__accessibility-description">{`${__(
-											'about'
-										)} ${cardTitle}`}</span>
-									</span>
-								</a>
+								<RichText
+									tagName="div"
+									className="card__readmore-link"
+									value={linkText}
+									onChange={(newValue) =>
+										setAttributes({ linkText: newValue })
+									}
+								/>
 							</div>
 						</div>
 					</div>

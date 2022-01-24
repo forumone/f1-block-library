@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/standalone-link",
+  "title": "Link",
+  "category": "widgets",
+  "icon": "links",
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": false
+    }
+  },
+  "editorScript": "file:../build/standalone-link.js",
+  "style": "file:../build/standalone-link.css",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": "a"
+    },
+    "align": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "target"
+    },
+    "rel": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "rel"
+    },
+    "accessibleLabel": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "aria-label"
+    }
+  },
+  "styles": [
+    {
+      "name": "arrow",
+      "label": "Arrow"
+    }
+  ]
+}

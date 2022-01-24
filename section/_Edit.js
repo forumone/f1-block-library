@@ -3,7 +3,6 @@ import {
 	InnerBlocks,
 	store,
 	useSetting,
-	useInnerBlocksProps,
 } from '@wordpress/block-editor';
 import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
@@ -25,17 +24,8 @@ function Edit({ attributes, clientId }) {
 	const blockProps = useBlockProps({
 		className: classnames('l-section'),
 	});
-	const innerBlockProps = useInnerBlocksProps(
-		layoutSupportEnabled ? blockProps : undefined,
-		{
-			__experimentalLayout: layoutSupportEnabled
-				? layoutInUse
-				: undefined,
-		}
-	);
-	const propsToUse = layoutSupportEnabled ? innerBlockProps : blockProps;
 	return (
-		<section {...propsToUse}>
+		<section {...blockProps}>
 			<InnerBlocks
 				template={[
 					[
@@ -63,6 +53,9 @@ function Edit({ attributes, clientId }) {
 						],
 					],
 				]}
+				__experimentalLayout={
+					layoutSupportEnabled ? layoutInUse : undefined
+				}
 			/>
 		</section>
 	);

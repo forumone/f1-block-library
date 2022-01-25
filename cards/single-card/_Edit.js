@@ -11,11 +11,19 @@ import {
 import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL } from '@wordpress/blob';
-import { Spinner, TextControl, PanelBody } from '@wordpress/components';
+import {
+	Spinner,
+	TextControl,
+	PanelBody,
+	ToolbarButton,
+	Popover,
+} from '@wordpress/components';
+import { useEffect, useState } from '@wordpress/element';
+import { link as linkIcon, linkOff as linkOffIcon } from '@wordpress/icons';
 
 const isTemporaryMedia = (id, url) => !id && isBlobURL(url);
 
-function Edit({ attributes, setAttributes }) {
+function Edit({ attributes, setAttributes, isSelected }) {
 	const blockProps = useBlockProps();
 	const {
 		eyebrow,
@@ -29,11 +37,6 @@ function Edit({ attributes, setAttributes }) {
 		linkText,
 		linkLabel,
 	} = attributes;
-
-	const link = {
-		url,
-		opensInNewTab,
-	};
 
 	const setImageAttributes = (media) => {
 		if (!media || !media.url) {
@@ -52,6 +55,29 @@ function Edit({ attributes, setAttributes }) {
 	};
 
 	const isUploadingMedia = isTemporaryMedia(imageId, imageUrl);
+	const [isEditingUrl, setIsEditingUrl] = useState(false);
+	const isUrlSet = !!url;
+	const link = {
+		url,
+		opensInNewTab,
+	};
+	const unlink = () => {
+		setAttributes({
+			url: null,
+			opensInNewTab: null,
+		});
+		setIsEditingUrl(false);
+	};
+	const editUrl = (event) => {
+		event.preventDefault();
+		setIsEditingUrl(true);
+	};
+
+	useEffect(() => {
+		if (!isSelected) {
+			setIsEditingUrl(false);
+		}
+	}, [isSelected]);
 
 	return (
 		<>
@@ -67,6 +93,22 @@ function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 			<BlockControls>
+				{!isUrlSet && (
+					<ToolbarButton
+						title={__('Link')}
+						name="link"
+						icon={linkIcon}
+						onClick={editUrl}
+					/>
+				)}
+				{isUrlSet && (
+					<ToolbarButton
+						title={__('Unlink')}
+						name="link"
+						icon={linkOffIcon}
+						onClick={unlink}
+					/>
+				)}
 				<MediaReplaceFlow
 					mediaId={imageId}
 					mediaUrl={imageUrl}
@@ -81,12 +123,19 @@ function Edit({ attributes, setAttributes }) {
 				className={classnames(blockProps.className, 'card')}
 			>
 				<div className="card__body">
-					<LinkControl
-						hasTextControl
-						onChange={(newValue) => setAttributes(newValue)}
-						value={link}
-						label={__('Card URL')}
-					/>
+					{isEditingUrl && (
+						<Popover
+							onClose={() => setIsEditingUrl(false)}
+							focusOnMount={isEditingUrl ? 'firstElement' : false}
+						>
+							<LinkControl
+								hasTextControl
+								onChange={(newValue) => setAttributes(newValue)}
+								value={link}
+								label={__('Card URL')}
+							/>
+						</Popover>
+					)}
 					<div className="card__header">
 						<RichText
 							placeholder={__('Date or Topic')}

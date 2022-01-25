@@ -1,14 +1,12 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import classnames from 'classnames';
 
 function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'copyright',
+	});
 	const { copyrightText } = attributes;
 	return (
-		<div
-			{...blockProps}
-			className={classnames(blockProps.className, 'copyright')}
-		>
+		<div {...blockProps}>
 			&copy;{new Date().getFullYear()}{' '}
 			<RichText
 				identifier="copyrightText"

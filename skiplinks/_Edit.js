@@ -1,14 +1,12 @@
 import { useBlockProps } from '@wordpress/block-editor';
-import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 
 function Edit() {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'skiplinks',
+	});
 	return (
-		<div
-			{...blockProps}
-			className={classnames(blockProps.className, 'skiplinks')}
-		>
+		<div {...blockProps}>
 			<a href="#main" className="skiplinks__link">
 				{__('Skip to main content')}
 			</a>

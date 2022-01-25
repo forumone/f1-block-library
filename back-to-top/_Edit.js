@@ -2,10 +2,11 @@ import BackToTop from './_BackToTop';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import classnames from 'classnames';
 
 function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'back-to-top',
+	});
 	const { topElement, title } = attributes;
 	return (
 		<>
@@ -27,12 +28,7 @@ function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<BackToTop
-				{...blockProps}
-				className={classnames(blockProps.className, 'back-to-top')}
-				topElement={topElement}
-				title={title}
-			/>
+			<BackToTop {...blockProps} topElement={topElement} title={title} />
 		</>
 	);
 }

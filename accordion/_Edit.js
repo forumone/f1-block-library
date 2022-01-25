@@ -3,12 +3,13 @@ import {
 	InnerBlocks,
 	InspectorControls,
 } from '@wordpress/block-editor';
-import classnames from 'classnames';
 import { PanelBody, ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'accordion',
+	});
 	const { allowToggle, allowMultiple } = attributes;
 	return (
 		<>
@@ -40,10 +41,7 @@ function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div
-				{...blockProps}
-				className={classnames(blockProps.className, 'accordion')}
-			>
+			<div {...blockProps}>
 				<InnerBlocks
 					allowedBlocks={['f1-block-library/accordion-item']}
 					template={[['f1-block-library/accordion-item', {}]]}

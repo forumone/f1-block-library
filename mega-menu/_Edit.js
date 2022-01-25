@@ -1,13 +1,11 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import classnames from 'classnames';
 
 function Edit() {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'mega-menu',
+	});
 	return (
-		<div
-			{...blockProps}
-			className={classnames(blockProps.className, 'mega-menu')}
-		>
+		<div {...blockProps}>
 			<InnerBlocks
 				allowedBlocks={['core/navigation']}
 				template={[

@@ -1,14 +1,12 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import classnames from 'classnames';
 
 function Save() {
-	const blockProps = useBlockProps.save();
+	const blockProps = useBlockProps.save({
+		className: 'mega-menu',
+	});
 
 	return (
-		<div
-			{...blockProps}
-			className={classnames(blockProps.className, 'mega-menu')}
-		>
+		<div {...blockProps}>
 			<InnerBlocks.Content />
 		</div>
 	);

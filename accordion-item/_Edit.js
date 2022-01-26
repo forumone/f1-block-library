@@ -1,19 +1,16 @@
 import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
-import classnames from 'classnames';
 
 function Edit({ attributes, setAttributes, clientId }) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'accordion__item',
+	});
 	const { title, blockId } = attributes;
 	if (!blockId) {
 		setAttributes({ blockId: `accordion-item-${clientId}` });
 	}
 	return (
-		<div
-			{...blockProps}
-			className={classnames(blockProps.className, 'accordion__item')}
-			id={blockId}
-		>
+		<div {...blockProps} id={blockId}>
 			<h3 className="accordion__heading">
 				<RichText
 					className="accordion__toggle"

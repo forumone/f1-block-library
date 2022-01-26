@@ -6,33 +6,37 @@ import {
 	MediaPlaceholder,
 	BlockControls,
 	MediaReplaceFlow,
+	InspectorControls,
 } from '@wordpress/block-editor';
 import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL } from '@wordpress/blob';
-import { Spinner } from '@wordpress/components';
+import {
+	Spinner,
+	TextControl,
+	PanelBody,
+	ToolbarButton,
+	Popover,
+} from '@wordpress/components';
+import { useEffect, useState } from '@wordpress/element';
+import { link as linkIcon, linkOff as linkOffIcon } from '@wordpress/icons';
 
 const isTemporaryMedia = (id, url) => !id && isBlobURL(url);
 
-function Edit({ attributes, setAttributes }) {
+function Edit({ attributes, setAttributes, isSelected }) {
 	const blockProps = useBlockProps();
 	const {
 		eyebrow,
 		url,
-		title,
 		opensInNewTab,
 		cardTitle,
 		summary,
 		imageId,
 		imageUrl,
 		imageAlt,
+		linkText,
+		linkLabel,
 	} = attributes;
-
-	const link = {
-		url,
-		title,
-		opensInNewTab,
-	};
 
 	const setImageAttributes = (media) => {
 		if (!media || !media.url) {
@@ -51,10 +55,60 @@ function Edit({ attributes, setAttributes }) {
 	};
 
 	const isUploadingMedia = isTemporaryMedia(imageId, imageUrl);
+	const [isEditingUrl, setIsEditingUrl] = useState(false);
+	const isUrlSet = !!url;
+	const link = {
+		url,
+		opensInNewTab,
+	};
+	const unlink = () => {
+		setAttributes({
+			url: null,
+			opensInNewTab: null,
+		});
+		setIsEditingUrl(false);
+	};
+	const editUrl = (event) => {
+		event.preventDefault();
+		setIsEditingUrl(true);
+	};
+
+	useEffect(() => {
+		if (!isSelected) {
+			setIsEditingUrl(false);
+		}
+	}, [isSelected]);
 
 	return (
 		<>
+			<InspectorControls>
+				<PanelBody title={__('Link Settings')}>
+					<TextControl
+						label={__('Accessible label')}
+						value={linkLabel}
+						onChange={(newValue) =>
+							setAttributes({ linkLabel: newValue })
+						}
+					/>
+				</PanelBody>
+			</InspectorControls>
 			<BlockControls>
+				{!isUrlSet && (
+					<ToolbarButton
+						title={__('Link')}
+						name="link"
+						icon={linkIcon}
+						onClick={editUrl}
+					/>
+				)}
+				{isUrlSet && (
+					<ToolbarButton
+						title={__('Unlink')}
+						name="link"
+						icon={linkOffIcon}
+						onClick={unlink}
+					/>
+				)}
 				<MediaReplaceFlow
 					mediaId={imageId}
 					mediaUrl={imageUrl}
@@ -69,15 +123,28 @@ function Edit({ attributes, setAttributes }) {
 				className={classnames(blockProps.className, 'card')}
 			>
 				<div className="card__body">
-					<LinkControl
-						hasTextControl
-						onChange={(newValue) => setAttributes(newValue)}
-						value={link}
-						label={__('Card URL')}
-					/>
+					{isEditingUrl && (
+						<Popover
+							onClose={() => setIsEditingUrl(false)}
+							focusOnMount={isEditingUrl ? 'firstElement' : false}
+						>
+							<LinkControl
+								hasTextControl
+								onChange={(newValue) => setAttributes(newValue)}
+								value={link}
+								label={__('Card URL')}
+							/>
+						</Popover>
+					)}
 					<div className="card__header">
 						<RichText
 							placeholder={__('Date or Topic')}
+							allowedFormats={[
+								'core/bold',
+								'core/italic',
+								'core/subscript',
+								'core/superscript',
+							]}
 							tagName="div"
 							className="card__date"
 							value={eyebrow}
@@ -87,6 +154,12 @@ function Edit({ attributes, setAttributes }) {
 						/>
 						<RichText
 							placeholder={__('Title')}
+							allowedFormats={[
+								'core/bold',
+								'core/italic',
+								'core/subscript',
+								'core/superscript',
+							]}
 							tagName="h3"
 							className="card__title"
 							value={cardTitle}
@@ -105,25 +178,14 @@ function Edit({ attributes, setAttributes }) {
 						/>
 						<div className="card__footer">
 							<div className="card__readmore">
-								<a href={url} className="readmore-link">
-									{__('Read more')}
-									<span className="readmore-link__icon">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="28"
-											height="28"
-											viewBox="0 0 28 28"
-										>
-											<path
-												fill="#231f20"
-												d="M14 4.648l9.352 9.352-9.352 9.352-1.641-1.641 6.508-6.563h-14.219v-2.297h14.219l-6.508-6.563z"
-											/>
-										</svg>
-										<span className="readmore-link__accessibility-description">{`${__(
-											'about'
-										)} ${cardTitle}`}</span>
-									</span>
-								</a>
+								<RichText
+									tagName="div"
+									className="card__readmore-link"
+									value={linkText}
+									onChange={(newValue) =>
+										setAttributes({ linkText: newValue })
+									}
+								/>
 							</div>
 						</div>
 					</div>

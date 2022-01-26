@@ -26,7 +26,9 @@ if ($featured_cards): ?>
 			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),
-			get_the_excerpt($post)
+			get_the_excerpt($post),
+			__('Read more'),
+			sprintf(__('Read more about %s'), get_the_title($post))
 		);
 	endforeach; wp_reset_postdata(); ?>
 </div>

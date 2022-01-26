@@ -52,7 +52,9 @@ function f1_block_library_query_cards_callback( $block_attributes, $block, $cont
 			get_the_date('', $post),
 			get_the_permalink($post),
 			get_the_title($post),
-			get_the_excerpt($post)
+			get_the_excerpt($post),
+			__('Read more'),
+			sprintf(__('Read more about %s'), get_the_title($post))
 		);
 	}
 	wp_reset_postdata();

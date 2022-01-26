@@ -7,7 +7,7 @@
  * Relationship field to manually select content to include.
  */
 
-function cardMarkup($image, $eyebrow, $url, $title, $summary, $openInNewTab = false) {
+function cardMarkup($image, $eyebrow, $url, $title, $summary, $linkText, $linkLabel = '', $openInNewTab = false) {
 	$markup = '
 <div class="card">
 	<div class="card__body">
@@ -18,32 +18,27 @@ function cardMarkup($image, $eyebrow, $url, $title, $summary, $openInNewTab = fa
 	}
 	if ($url && $title) {
 		$markup .= sprintf('<h3 class="card__title"><a href="%1$s" target="%3$s">%2$s</a></h3>', $url, $title, $openInNewTab ? '_blank' : '_self');
+	} elseif ($title) {
+		$markup .= sprintf('<h3 class="card__title">%s</h3>', $title);
 	}
 	$markup .= '</div>';
 	if ($summary) {
 		$markup .= sprintf('<div class="card__content">%s</div>', $summary);
 	}
-	if ($url && $title) {
+	if ($url && $linkText) {
 		$markup .= sprintf('
 		<div class="card__footer">
 			<div class="card__readmore">
-				<a href="%1$s" target="%5$s" class="readmore-link">
-					%3$s
-					<span class="readmore-link__icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
-						  <path fill="#231f20" d="M14 4.648l9.352 9.352-9.352 9.352-1.641-1.641 6.508-6.563h-14.219v-2.297h14.219l-6.508-6.563z"></path>
-						</svg>
-						<span class="readmore-link__accessibility-description">%4$s %2$s</span>
-					</span>
+				<a href="%1$s" class="readmore-link" aria-label="%4$s"%3$s>
+					%2$s
 				</a>
 			</div>
 		</div>
 		',
 			$url,
-			$title,
-			__( 'Read more' ),
-			__(' about' ),
-			$openInNewTab ? '_blank' : '_self'
+			$linkText,
+			$openInNewTab ? ' target="_blank" rel="noreferrer noopener"' : '',
+			$linkLabel ?: $linkText
 		);
 	}
 	$markup .= '</div>';

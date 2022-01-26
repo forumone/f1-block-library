@@ -15,6 +15,8 @@ function f1_block_library_single_card_callback( $block_attributes, $block, $cont
 		!empty($block_attributes['url']) ? $block_attributes['url'] : null,
 		!empty($block_attributes['cardTitle']) ? $block_attributes['cardTitle'] : null,
 		!empty($block_attributes['summary']) ? $block_attributes['summary'] : null,
+		!empty($block_attributes['linkText']) ? $block_attributes['linkText'] : __('Read more'),
+		!empty($block_attributes['linkLabel']) ? $block_attributes['linkLabel'] : null,
 		!empty($block_attributes['opensInNewTab']) ? $block_attributes['opensInNewTab'] : false
 	);
 }

@@ -12,13 +12,17 @@
     "url": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
-    },
     "id": {
       "type": "number"
     },
     "type": {
+      "type": "string"
+    },
+    "linkText": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "linkLabel": {
       "type": "string"
     },
     "opensInNewTab": {

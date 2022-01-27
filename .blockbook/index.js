@@ -1,25 +1,20 @@
 import { registerBlockType, registerTheme } from 'blockbook-cli/src/app/api';
-import editorStyles from '!!raw-loader!../../../themes/wp-next-theme/dist/css/editor-styles.css';
+import themeStyles from '!!raw-loader!../../../themes/wp-next-theme/dist/css/blockbook.css';
 
-import '../build/accordion.css';
 import '../accordion/accordion-editor.css';
 import '../build/accordion';
 import '../build/accordion-item';
 import '../build/back-to-top';
-import '../build/back-to-top.css';
 import '../build/copyright';
 import '../build/skiplinks';
-import '../build/skiplinks.css';
 import '../build/mega-menu';
-import '../build/mega-menu.css';
-import '../build/query-cards.css';
 import '../build/single-card';
 
 // Themes
 registerTheme({
 	name: 'wp-next-theme',
 	title: 'WP Next Theme',
-	editorStyles,
+	themeStyles,
 });
 
 // Blocks

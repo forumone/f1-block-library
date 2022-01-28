@@ -7,28 +7,14 @@
 	display: none;
 
 	@include break-small {
-		@include reduce-motion('transition');
 		align-items: center;
-		border-radius: 50%;
 		bottom: 1.25rem;
 		display: flex;
 		height: 4.375rem;
 		justify-content: center;
 		position: fixed;
 		right: 1.25rem;
-		transition-duration: 200ms;
-		transition-property: filter, opacity;
-		transition-timing-function: ease-in;
 		width: 4.375rem;
-
-		&:visited {
-			color: currentColor;
-		}
-
-		&:hover,
-		&:focus {
-			filter: brightness(0.6);
-		}
 
 		&[aria-hidden='true'] {
 			opacity: 0;

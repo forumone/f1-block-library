@@ -7,6 +7,5 @@
   "supports": {
     "html": false
   },
-  "editorScript": "file:../build/skiplinks.js",
-  "style": "file:../build/skiplinks.css"
+  "editorScript": "file:../build/skiplinks.js"
 }

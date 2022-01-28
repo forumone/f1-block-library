@@ -13,7 +13,6 @@
     }
   },
   "editorScript": "file:../build/standalone-link.js",
-  "style": "file:../build/standalone-link.css",
   "attributes": {
     "text": {
       "type": "string",

@@ -31,4 +31,8 @@ module.exports = {
 				return updatedEntries;
 			}, {});
 	},
+	resolve: {
+		...defaultConfig.resolve,
+		modules: [path.resolve(__dirname), 'node_modules'],
+	},
 };

@@ -10,6 +10,41 @@
       "default": [],
       "source": "query",
       "selector": ".slider__slide"
+    },
+    "mode": {
+      "type": "string",
+      "default": "carousel",
+      "source": "attribute",
+      "attribute": "data-mode",
+      "selector": ".slider"
+    },
+    "items": {
+      "type": "string",
+      "default": "1",
+      "source": "attribute",
+      "attribute": "data-items",
+      "selector": ".slider"
+    },
+    "slideBy": {
+      "type": "string",
+      "default": "1",
+      "source": "attribute",
+      "attribute": "data-slide-by",
+      "selector": ".slider"
+    },
+    "controls": {
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "attribute": "data-controls",
+      "selector": ".slider"
+    },
+    "nav": {
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "attribute": "data-nav",
+      "selector": ".slider"
     }
   },
   "editorScript": "file:../build/slider.js",

@@ -36,7 +36,8 @@
     "@wordpress/stylelint-config": "^19.1.0",
     "blockbook-cli": "github:youknowriad/blockbook",
     "classnames": "^2.3.1",
-    "glob": "^7.2.0"
+    "glob": "^7.2.0",
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "@wordpress/prettier-config": "^1.1.1",

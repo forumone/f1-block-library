@@ -98,6 +98,11 @@ A section with a title and optional link (e.g. for "Read all").
 Accessible link to skip to the main content. Note that you will need to add the ID of
 main to the appropriate element in your template(s) as well.
 
+### Slider
+Carousel using [Tiny Slider](https://github.com/ganlanyuan/tiny-slider). Each slide must be
+a core Group block that can then contain whatever block(s), such as images or quotes, make up
+the slide.
+
 ### Standalone Link
 A non-button link displayed on its own (i.e. not part of a paragraph of text).
 A common use for this is a "Read more" type link. Additional Block Styles can be

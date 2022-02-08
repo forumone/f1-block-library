@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/slider",
+  "title": "Slider",
+  "keywords": ["slider", "carousel", "gallery"],
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": ".slider__slide"
+    },
+    "mode": {
+      "type": "string",
+      "default": "carousel",
+      "source": "attribute",
+      "attribute": "data-mode",
+      "selector": ".slider"
+    },
+    "items": {
+      "type": "string",
+      "default": "1",
+      "source": "attribute",
+      "attribute": "data-items",
+      "selector": ".slider"
+    },
+    "slideBy": {
+      "type": "string",
+      "default": "1",
+      "source": "attribute",
+      "attribute": "data-slide-by",
+      "selector": ".slider"
+    },
+    "controls": {
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "attribute": "data-controls",
+      "selector": ".slider"
+    },
+    "nav": {
+      "type": "string",
+      "default": "true",
+      "source": "attribute",
+      "attribute": "data-nav",
+      "selector": ".slider"
+    }
+  },
+  "editorScript": "file:../build/slider.js",
+  "viewScript": "file:../build/slider-view.js",
+  "style": "file:../build/slider-view.css"
+}

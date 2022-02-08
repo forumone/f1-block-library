@@ -32,6 +32,7 @@ function f1_block_library_register_blocks() {
 	register_block_type_from_metadata(__DIR__ . '/cards/manual-cards');
 	register_block_type_from_metadata(__DIR__ . '/standalone-link');
 	register_block_type_from_metadata(__DIR__ . '/section');
+	register_block_type_from_metadata(__DIR__ . '/slider');
 }
 add_action( 'init', 'f1_block_library_register_blocks' );
 

@@ -6,9 +6,7 @@
     "format": "wp-scripts format",
     "lint": "wp-scripts lint-js && wp-scripts lint-style",
     "build": "npm run lint && wp-scripts build",
-    "dev": "wp-scripts start",
-    "blockbook:start": "blockbook start",
-    "blockbook:build": "blockbook build"
+    "dev": "wp-scripts start"
   },
   "repository": {
     "type": "git",
@@ -34,13 +32,11 @@
     "@wordpress/scripts": "^19.2.2",
     "@wordpress/server-side-render": "^3.0.16",
     "@wordpress/stylelint-config": "^19.1.0",
-    "blockbook-cli": "github:youknowriad/blockbook",
     "classnames": "^2.3.1",
     "glob": "^7.2.0",
     "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
-    "@wordpress/prettier-config": "^1.1.1",
-    "webpack-dev-server": "^4.7.2"
+    "@wordpress/prettier-config": "^1.1.1"
   }
 }

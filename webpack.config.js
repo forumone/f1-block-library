@@ -5,7 +5,7 @@ module.exports = {
 	...defaultConfig,
 	entry: () => {
 		return glob
-			.sync('!(build|node_modules)/**/*.js', {
+			.sync('!(build|node_modules|lib)/**/*.js', {
 				ignore: ['**/_*'],
 			})
 			.reduce((entries, currentFile) => {

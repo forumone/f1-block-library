@@ -6,7 +6,8 @@
     "format": "wp-scripts format",
     "lint": "wp-scripts lint-js && wp-scripts lint-style",
     "build": "npm run lint && wp-scripts build",
-    "dev": "wp-scripts start"
+    "dev": "wp-scripts start",
+    "block": "node lib/block.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
     "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
-    "@wordpress/prettier-config": "^1.1.1"
+    "@wordpress/prettier-config": "^1.1.1",
+    "inquirer": "^8.2.1",
+    "mkdirp": "^1.0.4"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "f1-block-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forum One WP block library",
   "scripts": {
     "format": "wp-scripts format",

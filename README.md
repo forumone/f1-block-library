@@ -64,6 +64,9 @@ An accessible accordion.
 ### Accordion Item
 An individual item within an accordion. Can only be used inside the Accordion block.
 
+### Address
+An `<address>` element.
+
 ### Back to Top
 A link to jump back to the top of the page.
 

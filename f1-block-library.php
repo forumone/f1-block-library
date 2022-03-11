@@ -14,9 +14,10 @@ require_once plugin_dir_path(__FILE__) . 'cards/query-cards/query-cards-callback
 require_once plugin_dir_path(__FILE__) . 'cards/single-card/single-card-callback.php';
 
 function f1_block_library_register_blocks() {
-  	register_block_type_from_metadata(__DIR__ . '/back-to-top');
+	register_block_type_from_metadata(__DIR__ . '/back-to-top');
 	register_block_type_from_metadata(__DIR__ . '/accordion-item');
 	register_block_type_from_metadata(__DIR__ . '/accordion');
+	register_block_type_from_metadata(__DIR__ . '/address');
 	register_block_type_from_metadata(__DIR__ . '/copyright', array(
 		'render_callback' => 'f1_block_library_copyright_callback',
 	) );

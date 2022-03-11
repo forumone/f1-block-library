@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "f1-block-library/address",
+  "title": "Address",
+  "category": "text",
+  "editorScript": "file:../build/address.js",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "address"
+    }
+  }
+}

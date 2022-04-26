@@ -1,7 +1,7 @@
 // Unfortunately, doesn't look like @wordpress/base-styles
 // supports @use yet.
-@import 'node_modules/@wordpress/base-styles/breakpoints';
-@import 'node_modules/@wordpress/base-styles/mixins';
+@import "node_modules/@wordpress/base-styles/breakpoints";
+@import "node_modules/@wordpress/base-styles/mixins";
 
 .back-to-top {
 	display: none;
@@ -16,14 +16,14 @@
 		right: 1.25rem;
 		width: 4.375rem;
 
-		&[aria-hidden='true'] {
+		&[aria-hidden="true"] {
 			opacity: 0;
 		}
 	}
 }
 
 .back-to-top__icon {
-	fill: currentColor;
+	fill: currentcolor;
 	height: 1.375rem;
 	width: 2.1875rem;
 }

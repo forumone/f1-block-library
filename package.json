@@ -20,19 +20,19 @@
   },
   "homepage": "https://github.com/forumone/f1-block-library#readme",
   "dependencies": {
-    "@wordpress/base-styles": "^4.0.4",
-    "@wordpress/blob": "^3.2.2",
-    "@wordpress/block-editor": "^8.0.11",
-    "@wordpress/blocks": "^11.1.4",
-    "@wordpress/components": "^19.1.5",
-    "@wordpress/data": "^6.1.5",
-    "@wordpress/dom-ready": "^3.2.3",
-    "@wordpress/element": "^4.0.4",
-    "@wordpress/i18n": "^4.2.4",
-    "@wordpress/icons": "^6.1.1",
-    "@wordpress/scripts": "^19.2.2",
-    "@wordpress/server-side-render": "^3.0.16",
-    "@wordpress/stylelint-config": "^19.1.0",
+    "@wordpress/base-styles": "^4.4.0",
+    "@wordpress/blob": "^3.7.0",
+    "@wordpress/block-editor": "^8.6.0",
+    "@wordpress/blocks": "^11.6.0",
+    "@wordpress/components": "^19.9.0",
+    "@wordpress/data": "^6.7.0",
+    "@wordpress/dom-ready": "^3.7.0",
+    "@wordpress/element": "^4.5.0",
+    "@wordpress/i18n": "^4.7.0",
+    "@wordpress/icons": "^7.0.1",
+    "@wordpress/scripts": "^22.5.0",
+    "@wordpress/server-side-render": "^3.5.0",
+    "@wordpress/stylelint-config": "^20.0.2",
     "classnames": "^2.3.1",
     "glob": "^7.2.0",
     "tiny-slider": "^2.9.4"
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@wordpress/prettier-config": "^1.1.1",
     "inquirer": "^8.2.1",
-    "mkdirp": "^1.0.4"
+    "mkdirp": "^1.0.4",
+    "prettier": "^2.6.2"
   }
 }

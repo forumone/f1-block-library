@@ -1,5 +1,5 @@
-@import 'node_modules/@wordpress/base-styles/breakpoints';
-@import 'node_modules/@wordpress/base-styles/mixins';
+@import "node_modules/@wordpress/base-styles/breakpoints";
+@import "node_modules/@wordpress/base-styles/mixins";
 
 :root {
 	--mega-menu-header-height: 0;
@@ -17,7 +17,7 @@
 			.has-child {
 				position: static;
 
-				.wp-block-navigation-submenu__toggle[aria-expanded='true'] {
+				.wp-block-navigation-submenu__toggle[aria-expanded="true"] {
 					+ .wp-block-navigation__submenu-container {
 						align-items: flex-start;
 						display: grid;
@@ -31,7 +31,7 @@
 						right: 0;
 
 						&::after {
-							content: '';
+							content: "";
 							display: block;
 							grid-column-end: -1;
 							grid-row-start: 1;

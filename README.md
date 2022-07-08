@@ -2,23 +2,33 @@
 
 A starting set of custom blocks for WordPress 5.9+.
 
-## Requirements
-- Node 14.x.x
-- npm 7.x.x
+## Requirements for Use
 - WordPress 5.9+
 - Advanced Custom Fields Pro (needed for the Featured Cards block)
+- [Gesso](https://github.com/forumone/gesso-wp) [not technically required but you probably want it]
 
-Not required but heavily recommended, a theme based on
-[the to-be-named starter theme](https://github.com/forumone/wp-next-theme).
+## Additional Requirements for Development
+- Node 14.x.x
+- npm 7.x.x
 
 ## Getting Started
-1. Enable the plugin
-2. `npm ci`
-3. `npm run dev`
+If you are installing the plugin for use in a site, you can install it with Composer
+or download it and place it in the plugins folder. Enable the plugin, and you can begin
+using the available blocks.
+
+The F1 Block Library is a shared set of common blocks. For custom blocks for a site, you
+can use the [Block Plugins Template](https://github.com/forumone/blocks-plugin-template/) or
+[@wordpress/create-block](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/).
+
+You should not override this plugin on a site-by-site basis. To customize the block styling,
+use the starting styles in Gesso or otherwise style the blocks in your theme.
+
+To set up the plugin locally to contribute to it:
+1. `npm ci`
+2. `npm run dev`
 
 ## Building Assets
-To build assets for production or if you want to compile the plugin without
-watching for changes:
+To build assets for production:
 1. `npm ci`
 2. `npm run build`
 
@@ -37,25 +47,6 @@ a new block, you'll need to:
 3. Add any other assets, such as a SCSS file or additional scripts to load with the block. See the Slider block for an example of both.
 4. Add the index.js file and call the `registerBlock` function.
 5. Register the block within the `f1_block_library_register_blocks` in `f1-block-library.php`.
-
-## Blockbook
-[Blockbook](https://github.com/youknowriad/blockbook) allows you to review and demo blocks
-outside of WordPress, similar to Pattern Lab and Storybook.
-
-To start Blockbook locally:
-```
-npm run blockbook:start
-```
-
-To compile a static version of Blockbook:
-```
-npm run blockbook:build
-```
-
-To add a new block to Blockbook, import the index.js JavaScript file in `.blockbook/index.js`
-and add the block name to the array of blocks to be registered. SCSS files
-should be imported in the theme (for wp-next-theme, that's in `blockbook.scss`) so
-that the block styles will display for both the Example and Editor tabs.
 
 ## Available Blocks
 ### Accordion
